@@ -1,0 +1,87 @@
+
+    
+body, html {
+    /* height: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.container {
+    position: relative;
+    width: 1200px;
+    height: 550px;
+
+}
+
+.day-night {
+    width: 150Px;
+    height: 150px;
+    background: linear-gradient(135deg, #87CEEB, #FFD700); /* Day colors */
+    animation: dayNight 20s infinite alternate;
+    position: absolute;
+    box-shadow: 10px 10px 10px grey;
+    top: 0;
+    left: 0;
+    border-radius: 250px;
+    
+}
+
+@keyframes dayNight {
+    0% {
+         transform: rotate(from top left to right bottom);
+        /* background: linear-gradient( #87CEEB, #ebdb84); /* Day colors */
+        /* left: 0px; 
+        /* top: 0px;  */
+    } 
+    25% {
+        background: linear-gradient( #f0d74e, #fc492a); /* Afternoon colors 
+          left: 50px; 
+         top: 50px; 
+
+    }
+    50% {
+        /* transform: rotate(); */
+        background: linear-gradient( #f6fa05ea, #f17a0a); /* Sunset colors */
+        /* top: 180px; */
+        /* left: 180px; */
+
+
+    }
+    75% {
+        background: linear-gradient( #d1d8df, #6f7881); /* Night colors */
+        /* top: 280px; */
+        /* left: 280px; */
+    }
+    100% {
+        /* transform: rotate(); */
+        top: 400px;
+        left: 1100px;
+        background: linear-gradient(1 #364b5f, #888c91); /* Night colors */
+
+    }
+}
+
+body {
+    background: linear-gradient(135deg, #87CEEB, #FFD700);
+    animation: backgroundChange 20s infinite alternate;
+}
+
+@keyframes backgroundChange {
+    0% {
+        background: linear-gradient(135deg, #0da9e7, #e2e2e0); /* Day */
+    }
+    25% {
+        background: linear-gradient(135deg,rgb(20, 120, 235),rgb(155, 155, 83)); /* Afternoon */
+    }
+    50% {
+        background: linear-gradient(135deg, #67bdf7, #383030); /* Sunset */
+    }
+    75% {
+        background: linear-gradient(135deg, #2C3E50, #34495E); /* Night */
+    }
+    100% {
+        background: linear-gradient(135deg, #2C3E50, #34495E); /* Night */
+    }
+}
